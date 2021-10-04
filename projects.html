@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <style>
+        html, body{
+            height: 100vh;
+            margin: 0px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Italiana&family=Lato&family=Roboto&display=swap');
+        .wrapper{
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.5fr 4fr 0.2fr;
+            grid-template-areas:
+            "header header header header"
+            "content content sidebar sidebar"
+            "footer footer footer footer";
+            background: linear-gradient(white,#B2B9DB);
+        }
+        .navbar{
+            grid-area: header;
+            background-color: black;
+        }
+
+        /* .content-box{
+            grid-area: content;
+            background: whitesmoke;
+        } */
+        .footer-box{
+            grid-area: footer;
+            background-color:black;
+        }
+
+        .nav-items{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .nav-items li{
+            display: inline-block;
+            margin: 0 2em 0 2em;
+        }
+
+        .nav-items li a{
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+        .nav-links{
+            /* align-self: flex-end; */
+            color: whitesmoke;
+            transition: 0.2s;
+        }
+        .nav-links:hover{
+            cursor: pointer;
+            /* transition-delay: 0.2s; */
+            /* background-color:#88A5BF; */
+            background-color: #59AAA3;
+            color: black;
+        }
+
+        /* .middle-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            "box1 box2 box3";
+            background-color:white;
+        } */
+
+        .name-box{
+            grid-area: content;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content:center;
+            /* background-color: ; */
+
+            /* background: linear-gradient(transparent,#EEECFF); */
+            
+            border: 1px solid #28364C;
+            /* align-items: center; */
+            /* margin: auto; */
+            /* font-family: 'Lato', sans-serif; */
+            /* font-family: 'Montserrat', sans-serif; */
+        }
+
+        .heading-content{
+            text-align: center;
+            font-size: 50px;
+            /* color: 28364C; */
+            color: black;
+            font-family: 'Encode Sans Semi Condensed', sans-serif;
+            /* font-family: 'Ephesis', cursive; */
+            font-weight: lighter;
+            /* font-family: 'Italiana', serif; */
+        }
+        .photo-box{
+            grid-area: sidebar;
+            border: 1px solid #28364C;
+            background-image: url("./img/me.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            mix-blend-mode: darken;
+        }
+
+        .photo-box img{
+            height: auto;
+            width: 100%;
+        }
+        .description{
+            font-family: 'Roboto', sans-serif;
+            font-size: larger;
+            text-align: center;
+        }
+
+        .education{
+            grid-area: box3;
+            text-align: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+        .card-container > img{
+            /* background-color: aquamarine; */
+            height: 150px;
+            width: 150px;
+            object-fit: contain;
+            /* border: 2px solid black; */
+        }
+
+        .hide{
+            height: 100%;
+            width: 100%;
+            display: none;
+        }
+        
+        .card-container:hover .image {
+            display: none;
+            transition: 0.5s;
+             opacity: 0.2;
+            /* display: block; */
+            /* background: #88A5BF; */
+        }
+
+        .card-container:hover .hide{
+            display: block;
+            /* opacity: 1; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="navbar">
+            <ul class="nav-items">
+                <li><a href="./index.html" class="nav-links">About Me</a></li>
+                <li><a href="./projects.html" class="nav-links">Projects</a></li>
+                <li><a href="./contact.html" class="nav-links">Contact</a></li>
+                <li><a href="./blog.html" class="nav-links">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-box">3</div>
+    </div>
+</body>
+</html>

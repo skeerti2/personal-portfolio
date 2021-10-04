@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <style>
+        html, body{
+            height: 100vh;
+            margin: 0px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100&family=Ephesis&family=Roboto&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Italiana&family=Lato&family=Roboto&display=swap'); */
+        .wrapper{
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.5fr 4fr 0.2fr;
+            grid-template-areas:
+            "header header header header"
+            "content content sidebar sidebar"
+            "footer footer footer footer";
+            /* background: linear-gradient(white,#B2B9DB); */
+            background: linear-gradient(white,#B2B9DB);
+
+        }
+        .navbar{
+            grid-area: header;
+            background-color: black;
+        }
+
+        /* .content-box{
+            grid-area: content;
+            background: whitesmoke;
+        } */
+        .footer-box{
+            grid-area: footer;
+            background-color:black;
+        }
+
+        .nav-items{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .nav-items li{
+            display: inline-block;
+            margin: 0 2em 0 2em;
+        }
+
+        .nav-items li a{
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+        .nav-links{
+            /* align-self: flex-end; */
+            color: whitesmoke;
+            transition: 0.2s;
+        }
+        .nav-links:hover{
+            cursor: pointer;
+            /* transition-delay: 0.2s; */
+            /* background-color:#88A5BF; */
+            background-color: #59AAA3;
+            color: #231F20;
+        }
+
+        /* .middle-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            "box1 box2 box3";
+            background-color:white;
+        } */
+
+        .name-box{
+            grid-area: content;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content:center;
+            /* background-color: ; */
+
+            /* background: linear-gradient(transparent,#EEECFF); */
+            
+            border: 1px solid #28364C;
+            /* align-items: center; */
+            /* margin: auto; */
+            /* font-family: 'Lato', sans-serif; */
+            /* font-family: 'Montserrat', sans-serif; */
+        }
+
+        .heading-content{
+            text-align: center;
+            font-size: 50px;
+            /* color: 28364C; */
+            /* color: black; */
+            color: #231F20;
+            /* color: #025949; */
+            text-shadow: 2px 2px 5px#59AAA3;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-family: 'Encode Sans Semi Condensed', sans-serif;
+            /* font-family: 'Ephesis', cursive; */
+            font-weight: lighter;
+            /* font-family: 'Italiana', serif; */
+        }
+
+        .sub-heading{
+            text-align: center;
+            font-size: 32px;
+            color: #231F20;
+            font-family: 'Encode Sans Semi Condensed', sans-serif;
+            font-weight: lighter;
+            /* font-family: 'Ephesis', cursive; */
+            /* font-weight: thin; */
+        }
+        .photo-box{
+            grid-area: sidebar;
+            border: 1px solid #28364C;
+            background-image: url("./img/me.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            /* mix-blend-mode: darken; */
+        }
+
+        .photo-box img{
+            height: auto;
+            width: 100%;
+        }
+        .description{
+            font-family: 'Roboto', sans-serif;
+            font-size: larger;
+            text-align: center;
+            color: #231F20;
+        }
+
+        .education{
+            grid-area: box3;
+            text-align: center;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        .card-container{
+            position: relative;
+            height: 150px;
+            width: 150px;
+        }
+        .card-container > img{
+            /* background-color: aquamarine; */
+            
+            /* object-fit: contain; */
+            /* opacity: 1; */
+            width: 100%;
+            display: block;
+            /* border: 2px solid black; */
+        }
+
+        .overlay{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            /* background: #B2B9DB; */
+            background: none;
+            border: 2px solid #59AAA3;
+            opacity: 0;
+            transition: .5s ease;
+            /* background-color: #404253; */
+            border-radius: 5px;
+            box-shadow: 2px 1px 2px 1px #59AAA3;
+            /* position: relative; */
+            /* height: 150px; */
+            /* width: 150px; */
+            /* display: none; */
+        }
+        
+        .education-text{
+            text-align: center;
+            vertical-align: middle;
+            color: #404253;
+            display: block;
+            margin: auto;
+        }
+        .card-container:hover .overlay {
+            opacity: 0.8;
+            /* display: none; */
+            /* transition: 0.5s; */
+             /* opacity: 0.2; */
+            /* display: block; */
+            /* background: #88A5BF; */
+        }
+
+        .card-container:hover img{
+            display: none;
+        }
+        .card-container:hover{
+            transition: .5s ease-in-out;
+            transform: scale(1.1);
+        }
+        /* .card-container:hover .hide{
+            display: inline-block;
+            /* opacity: 1; */
+        /* }  */
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="navbar">
+            <ul class="nav-items">
+                <li><a href="./index.html" class="nav-links">About Me</a></li>
+                    <li><a href="./projects.html" class="nav-links">Projects</a></li>
+                    <li><a href="./contact.html" class="nav-links">Contact</a></li>
+                    <li><a href="./blog.html" class="nav-links">Blog</a></li>
+            </ul>
+        </div>
+
+                <div class="name-box">
+                    <h1 class="heading-content">Sruti Keerti</h1>
+                    <!-- <h3 class="description">Hello, Welcome to my website!</h3> -->
+                    <p class="description">
+                        I'm a Computer Science graduate student at Northeastern University with prior
+                        experience and interest in Full Stack Web development.
+                    </p>
+                    <!-- <p class="description">
+                        My journey into tech started with an idea of building a website for home-chefs in 2016.
+                        After a deep dive into Full Stack Web development, there was no turning back!
+                    </p> -->
+                    <h3 class="sub-heading">Education</h3>
+                    <div class="education">
+                            <div class="card-container">
+                                <img class="image" src="./img/NU.png" alt="NEU_logo">
+                                <div class="overlay">
+                                    <div class="education-text">Candidate for MSCS Align Program, <br> Fall 2020 - May 2023(Exp)</div>
+                                </div>
+                            </div>
+                            <div class="card-container"><img src="./img/NTU.png" alt="NTU">
+                                <div class="overlay">
+                                    <div class="education-text">MSc Power Engineering with Dissertation from NTU@Rolls-Royce Corporate Lab<br> Aug 2015 - June 2016</div>
+                                </div>
+                            </div>
+                            <div class="card-container"><img src="./img/GA.png" alt="NEU_logo">
+                                <div class="overlay">
+                                    <div class="education-text"> Web development Bootcamp Graduate, Singapore <br> Jan 2017 - Apr 2017</div>
+                                </div>
+                            </div>
+                            <div class="card-container"><img src="./img/mu.png" alt="NEU_logo">
+                                <div class="overlay">
+                                    <div class="education-text">Bachelors in Electrical Engineering<br> Aug 2009 - Jun 2013</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+        <div class="photo-box">
+            <!-- <img src="./img/me.jpeg" alt="profile_pic"> -->
+        </div>
+
+
+        <div class="footer-box">3</div>
+    </div>
+</body>
+</html>
