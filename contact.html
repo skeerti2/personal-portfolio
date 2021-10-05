@@ -50,10 +50,10 @@
         .nav-items li a{
             font-family: 'Roboto', sans-serif;
             text-decoration: none;
+            color: white;
         }
         .nav-links{
             /* align-self: flex-end; */
-            color: whitesmoke;
             transition: 0.2s;
         }
         .nav-links:hover{
@@ -63,7 +63,10 @@
             background-color: #59AAA3;
             color: black;
         }
-
+        .nav-items li a.active-page{
+            background-color: #59AAA3;
+            color:  #231F20;
+        }
         .heading-content{
             text-align: center;
             font-size: 50px;
@@ -135,6 +138,7 @@
             max-width: 100%;
             object-fit: contain;
             float: left;
+            /* padding: 10px; */
         }
 
         .card-box{
@@ -157,30 +161,6 @@
             visibility: hidden;
         }
 
-        /* .gmail-box{
-            visibility: hidden;
-        }
-
-        .linkedin-box{
-            visibility: hidden;
-        }
-
-        .outlook-box{
-            visibility: hidden;
-        }
-
-        .insta-box{
-            visibility: hidden;
-        }
-
-        .fb-box{
-            visibility: hidden;
-        } */
-
-        /* .contact-box + gmail:hover .card-box{
-            visibility:visible;
-        } */
-
         .contact-box:hover{
         border-radius: 10px;
         /* border: 5px solid #88A5BF; */
@@ -198,12 +178,14 @@
     <div class="wrapper">
 
         <div class="navbar">
-            <ul class="nav-items">
-                <li><a href="./index.html" class="nav-links">About Me</a></li>
-                <li><a href="./projects.html" class="nav-links">Projects</a></li>
-                <li><a href="./contact.html" class="nav-links">Contact</a></li>
-                <li><a href="./blog.html" class="nav-links">Blog</a></li>
-            </ul>
+            <div class="navbar">
+                <ul class="nav-items">
+                    <li class="nav-links"><a href="./index.html"  >About Me</a></li>
+                    <li class="nav-links"><a href="./projects.html" >Projects</a></li>
+                    <li class="nav-links"><a href="./contact.html" class='active-page'>Contact</a></li>
+                    <li class="nav-links"><a href="./blog.html" >Blog</a></li>
+                </ul>
+        </div>
         </div>
 
         <div class="name-box">

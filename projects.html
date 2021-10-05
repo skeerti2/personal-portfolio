@@ -9,6 +9,7 @@
         html, body{
             height: 100vh;
             margin: 0px;
+            padding: 0px;
         }
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Italiana&family=Lato&family=Roboto&display=swap');
         .wrapper{
@@ -18,19 +19,16 @@
             grid-template-rows: 0.5fr 4fr 0.2fr;
             grid-template-areas:
             "header header header header"
-            "content content sidebar sidebar"
+            "content content content content"
             "footer footer footer footer";
             background: linear-gradient(white,#B2B9DB);
+            /* background: whitesmoke; */
         }
         .navbar{
             grid-area: header;
             background-color: black;
         }
 
-        /* .content-box{
-            grid-area: content;
-            background: whitesmoke;
-        } */
         .footer-box{
             grid-area: footer;
             background-color:black;
@@ -49,6 +47,12 @@
         .nav-items li a{
             font-family: 'Roboto', sans-serif;
             text-decoration: none;
+            color: white;
+        }
+
+        .nav-items li a.active-page{
+            background-color: #59AAA3;
+            color: #231F20;
         }
         .nav-links{
             /* align-self: flex-end; */
@@ -71,17 +75,17 @@
             background-color:white;
         } */
 
-        .name-box{
+        .project-box{
             grid-area: content;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            justify-content:center;
+            height: 100%;
+            /* justify-content:center; */
             /* background-color: ; */
 
             /* background: linear-gradient(transparent,#EEECFF); */
             
-            border: 1px solid #28364C;
             /* align-items: center; */
             /* margin: auto; */
             /* font-family: 'Lato', sans-serif; */
@@ -92,80 +96,136 @@
             text-align: center;
             font-size: 50px;
             /* color: 28364C; */
-            color: black;
+            /* color: black; */
+            color: #231F20;
+            /* color: #025949; */
+            /* text-shadow: 2px 2px 5px#59AAA3; */
+            letter-spacing: 6px;
+            text-transform: uppercase;
             font-family: 'Encode Sans Semi Condensed', sans-serif;
             /* font-family: 'Ephesis', cursive; */
             font-weight: lighter;
+            margin: 0px;
             /* font-family: 'Italiana', serif; */
         }
-        .photo-box{
-            grid-area: sidebar;
-            border: 1px solid #28364C;
-            background-image: url("./img/me.jpeg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            mix-blend-mode: darken;
-        }
 
-        .photo-box img{
-            height: auto;
-            width: 100%;
+        .sub-heading{
+            text-align: center;
+            font-size: 32px;
+            color: #231F20;
+            font-family: 'Encode Sans Semi Condensed', sans-serif;
+            font-weight: lighter;
+            /* font-family: 'Ephesis', cursive; */
+            /* font-weight: thin; */
         }
+       
         .description{
             font-family: 'Roboto', sans-serif;
             font-size: larger;
             text-align: center;
         }
 
-        .education{
-            grid-area: box3;
-            text-align: center;
+        .card-items{
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-around;
-        }
-        .card-container > img{
-            /* background-color: aquamarine; */
-            height: 150px;
-            width: 150px;
-            object-fit: contain;
-            /* border: 2px solid black; */
+            justify-content: space-evenly;
+            /* width: 90%; */
+            /* align-items: center; */
+            /* margin: auto; */
+            height: 100%;
+            column-gap: 10px;
+            row-gap: 10px;
+            /* width: 200px; */
         }
 
-        .hide{
+        .card{
+            /* margin-top: 0px; */
+            width: 49%;
+            height: 250px;
+            /* background-color:#59AAA3; */
+            background-color: whitesmoke;
+            color: #231F20;
+            border: 2px solid #B2B9DB;
+            border-radius: 5px;
+            /* position: relative; */
+        }
+        
+        .card-image{
+            max-width: 50%;
+            max-height: 50%;
+            display: block;
+            
+        }
+
+        /* .card-content{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             height: 100%;
             width: 100%;
-            display: none;
-        }
-        
-        .card-container:hover .image {
-            display: none;
-            transition: 0.5s;
-             opacity: 0.2;
-            /* display: block; */
-            /* background: #88A5BF; */
-        }
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #88A5BF;
+        } */
 
-        .card-container:hover .hide{
-            display: block;
-            /* opacity: 1; */
+        .card:hover .card-image{
+            display: none;
         }
-        
+        .card:hover .card-content{
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
-
         <div class="navbar">
             <ul class="nav-items">
-                <li><a href="./index.html" class="nav-links">About Me</a></li>
-                <li><a href="./projects.html" class="nav-links">Projects</a></li>
-                <li><a href="./contact.html" class="nav-links">Contact</a></li>
-                <li><a href="./blog.html" class="nav-links">Blog</a></li>
+                <li class="nav-links"><a href="./index.html"  >About Me</a></li>
+                <li class="nav-links"><a href="./projects.html" class='active-page' >Projects</a></li>
+                <li class="nav-links"><a href="./contact.html">Contact</a></li>
+                <li class="nav-links"><a href="./blog.html" >Blog</a></li>
             </ul>
         </div>
+        <div class="project-box">
+            <h1 class="sub-heading">Academic Projects</h1>
+            <div class="card-items">
+                <div class="card">
+                    <img class="card-image" src="./img/othello_game.png" alt="">
+                    <p class="card-content">
+                        Classic Othello game implemented in Python and Processing library with basic AI heuristic.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="./img/java8.png" alt="">
+                    <p class="card-content">
+                       Group project in Java using OOD for course CS 5004.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="./img/pup_target_game.png" alt="">
+                    <p class="card-content">
+                       Single player multi-level game using HTML/CSS, jQuery.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="./img/kw.png" alt="">
+                    <p class="card-content">
+                       Kitchen Wonders: Online food ordering system by home-chefs built as part of
+                       project in WDI-sg Bootcamp at GA.
+                    </p>
+                </div>
+                <div class="card">
+                    <img class="card-image" src="./img/rr_at_ntu.png" alt="">
+                    <p class="card-content">
+                       MSc. Power Engineering Dissertation project on Grid Compliance.
+                    </p>
+                </div>
+            </div>
 
+            <!-- <h1 class="sub-heading">Professional Projects</h1> -->
+        </div>
         <div class="footer-box">3</div>
     </div>
 </body>
