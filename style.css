@@ -9,7 +9,6 @@ html, body{
 
 
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100&family=Ephesis&family=Roboto&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Italiana&family=Lato&family=Roboto&display=swap'); */
 
 .navbar{
     grid-area: header;
@@ -61,15 +60,7 @@ html, body{
     color: #63A1F2;
 }
 
-.description{
-    font-family: 'Roboto', sans-serif;
-    font-weight: medium;
-    line-height: 1.2em;
-    font-size: larger;
-    text-align: center;
-    color: #231F20;
-    letter-spacing: 0.1em;
-}
+
 
 
 .heading-content{
@@ -81,10 +72,12 @@ html, body{
     /* color: #96D4E3; */
     /* color: #025949; */
     text-shadow: 2px 2px 5px#000;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     font-family: 'Encode Sans Semi Condensed', sans-serif;
     /* font-family: 'Ephesis', cursive; */
+    /* font-family: 'Birthstone Bounce', cursive; */
+
     font-weight: lighter;
     /* font-family: 'Italiana', serif; */
 }
@@ -97,6 +90,16 @@ html, body{
     font-weight: lighter;
     /* font-family: 'Ephesis', cursive; */
     /* font-weight: thin; */
+}
+
+.description{
+    font-family: 'Roboto', sans-serif;
+    font-weight: medium;
+    line-height: 1.3em;
+    font-size: larger;
+    text-align: center;
+    color: #231F20;
+    letter-spacing: 0.1em;
 }
 
 .card-description{
