@@ -16,8 +16,22 @@
         "header header header header"
         "content content sidebar sidebar"
         "footer footer footer footer";
-        /* background: linear-gradient(white,#B2B9DB); */
         background: linear-gradient(white,#B2B9DB);
+    }
+
+    @media only screen and (max-width: 600px) {
+        .wrapper{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 2fr 2fr 0.2fr;
+        grid-template-areas:
+        "header header header header"
+        "sidebar sidebar sidebar sidebar"
+        "content content content content"
+        "footer footer footer footer";
+        background: linear-gradient(white,#B2B9DB);
+        }
     }
         /* .middle-content{
             display: grid;
@@ -44,31 +58,7 @@
             /* font-family: 'Montserrat', sans-serif; */
         }
 
-        .heading-content{
-            text-align: center;
-            font-size: 50px;
-            /* color: 28364C; */
-            /* color: black; */
-            color: #231F20;
-            /* color: #025949; */
-            text-shadow: 2px 2px 5px#59AAA3;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            /* font-family: 'Ephesis', cursive; */
-            font-weight: lighter;
-            /* font-family: 'Italiana', serif; */
-        }
-
-        .sub-heading{
-            text-align: center;
-            font-size: 32px;
-            color: #231F20;
-            font-family: 'Encode Sans Semi Condensed', sans-serif;
-            font-weight: lighter;
-            /* font-family: 'Ephesis', cursive; */
-            /* font-weight: thin; */
-        }
+    
         .photo-box{
             grid-area: sidebar;
             border: 1px solid #28364C;
@@ -83,13 +73,7 @@
             height: auto;
             width: 100%;
         }
-        .description{
-            font-family: 'Roboto', sans-serif;
-            font-size: larger;
-            text-align: center;
-            color: #231F20;
-        }
-
+        
         .education{
             grid-area: box3;
             text-align: center;
@@ -123,12 +107,12 @@
             width: 100%;
             /* background: #B2B9DB; */
             background: none;
-            border: 2px solid #59AAA3;
+            border: 2px solid #71D9D0;;
             opacity: 0;
             transition: .5s ease;
             /* background-color: #404253; */
             border-radius: 5px;
-            box-shadow: 2px 1px 2px 1px #59AAA3;
+            box-shadow: 2px 1px 2px 1px #404253;
             /* position: relative; */
             /* height: 150px; */
             /* width: 150px; */
@@ -137,7 +121,6 @@
         
         .education-text{
             text-align: center;
-            vertical-align: middle;
             color: #404253;
             display: block;
             margin: auto;
@@ -158,11 +141,6 @@
             transition: .5s ease-in-out;
             transform: scale(1.1);
         }
-        /* .card-container:hover .hide{
-            display: inline-block;
-            /* opacity: 1; */
-        /* }  */
-
         
     </style>
 </head>
@@ -172,23 +150,21 @@
         <div class="navbar">
             <h1 class="heading-content">Sruti Keerti</h1>
             <ul class="nav-items">
-                <li class="nav-links"><a href="./index.html" class='active-page' >About Me</a></li>
-                <li class="nav-links"><a href="./pages/projects.html" >Projects</a></li>
-                <li class="nav-links"><a href="./pages/contact.html">Contact</a></li>
-                <li class="nav-links"><a href="./pages/blog.html" >Blog</a></li>
+                <li><a class="nav-links active-page" href="./index.html" >About Me</a></li>
+                <li><a class="nav-links" href="./pages/projects.html" >Projects</a></li>
+                <li ><a class="nav-links" href="./pages/contact.html">Contact</a></li>
+                <li ><a class="nav-links" href="./pages/blog.html" >Blog</a></li>
             </ul>
         </div>
 
                 <div class="name-box">
-                    <!-- <h3 class="description">Hello, Welcome to my website!</h3> -->
                     <p class="description">
                         I'm a Computer Science graduate student at Northeastern University with prior
-                        experience and interest in Full Stack Web development.
-                    </p>
-                    <!-- <p class="description">
-                        My journey into tech started with an idea of building a website for home-chefs in 2016.
+                        experience and interest in Full Stack Web development. 
+                        My journey into tech started with an idea of building a website for home-chefs
+                        in 2016.
                         After a deep dive into Full Stack Web development, there was no turning back!
-                    </p> -->
+                    </p>
                     <h3 class="sub-heading">Education</h3>
                     <div class="education">
                             <div class="card-container">
@@ -202,12 +178,12 @@
                                     <div class="education-text">MSc Power Engineering with Dissertation from NTU@Rolls-Royce Corporate Lab<br> Aug 2015 - June 2016</div>
                                 </div>
                             </div>
-                            <div class="card-container"><img src="./img/GA.png" alt="NEU_logo">
+                            <div class="card-container"><img src="./img/GA.png" alt="GA_logo">
                                 <div class="overlay">
                                     <div class="education-text"> Web development Bootcamp Graduate, Singapore <br> Jan 2017 - Apr 2017</div>
                                 </div>
                             </div>
-                            <div class="card-container"><img src="./img/mu.png" alt="NEU_logo">
+                            <div class="card-container"><img src="./img/MU.png" alt="MU_logo">
                                 <div class="overlay">
                                     <div class="education-text">Bachelors in Electrical Engineering<br> Aug 2009 - Jun 2013</div>
                                 </div>
