@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <style>
+        html, body{
+            height: 100vh;
+            margin: 0px;
+            padding: 0px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Italiana&family=Lato&family=Roboto&display=swap');
+        .wrapper{
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.5fr 4fr 0.2fr;
+            grid-template-areas:
+            "header header header header"
+            "content content content content"
+            "footer footer footer footer";
+            background: linear-gradient(white,#B2B9DB);
+            /* background: whitesmoke; */
+        }
+        .navbar{
+            grid-area: header;
+            background-color: #404253;
+        }
+
+        .footer-box{
+            grid-area: footer;
+            background-color: #404253;
+        }
+
+        .nav-items{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .nav-items li{
+            display: inline-block;
+            margin: 0 2em 0 2em;
+        }
+
+        .nav-items li a{
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-items li a.active-page{
+            background-color: #59AAA3;
+            color: #231F20;
+        }
+        .nav-links{
+            /* align-self: flex-end; */
+            color: whitesmoke;
+            transition: 0.2s;
+        }
+        .nav-links:hover{
+            cursor: pointer;
+            /* transition-delay: 0.2s; */
+            /* background-color:#88A5BF; */
+            background-color: #59AAA3;
+            color: black;
+        }
+
+        /* .middle-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+            "box1 box2 box3";
+            background-color:white;
+        } */
+
+        .project-box{
+            grid-area: content;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            height: 100%;
+            /* justify-content:center; */
+            /* background-color: ; */
+
+            /* background: linear-gradient(transparent,#EEECFF); */
+            
+            /* align-items: center; */
+            /* margin: auto; */
+            /* font-family: 'Lato', sans-serif; */
+            /* font-family: 'Montserrat', sans-serif; */
+        }
+
+        .heading-content{
+            text-align: center;
+            font-size: 50px;
+            /* color: 28364C; */
+            /* color: black; */
+            color: #231F20;
+            /* color: #025949; */
+            /* text-shadow: 2px 2px 5px#59AAA3; */
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            font-family: 'Encode Sans Semi Condensed', sans-serif;
+            /* font-family: 'Ephesis', cursive; */
+            font-weight: lighter;
+            margin: 0px;
+            /* font-family: 'Italiana', serif; */
+        }
+
+        .sub-heading{
+            text-align: center;
+            font-size: 32px;
+            color: #231F20;
+            font-family: 'Encode Sans Semi Condensed', sans-serif;
+            font-weight: lighter;
+            /* font-family: 'Ephesis', cursive; */
+            /* font-weight: thin; */
+        }
+       
+        .description{
+            /* font-family: 'Roboto', sans-serif; */
+            font-family: 'Encode Sans Semi Condensed', sans-serif;
+            /* font-weight: lighter; */
+            font-size: 18px;
+            /* font-size: larger; */
+            text-align: center;
+        }
+
+        .content{
+            font-family: 'Roboto', sans-serif;
+            font-weight: thin;
+            line-height: 1.8em;
+            /* line-height: 2px; */
+        }
+        .card-items{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 95%;
+            height: 100%;
+            column-gap: 2%;
+            row-gap: 2%;
+        }
+
+        .card{
+            height: 40%;
+            background-color: #404253;
+            max-width: 44%;
+            opacity: 1;
+            border: 2px solid #B2B9DB;
+            border-radius: 10px;
+            transition: .5s ease;
+        }
+        
+        .card-elements{
+            display: flex;
+            /* flex-wrap: wrap; */
+            height: 100%;
+        }
+        
+
+        .card-content{
+            flex: 2;
+            text-align: center;
+            align-self: center;
+            color: whitesmoke;
+        }
+
+        .card-image{
+            flex-basis: 33%;
+            
+        }
+
+        .card-image img {
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        /* .card:hover .card-image{
+            display: none;
+        }
+        .hide{
+            display: none;
+        }
+        .hide img{
+            width: 100%;
+            height: 100%;
+        }*/
+        .card:hover .card{
+            background-color:#96D4E3;
+            opacity: 0.2;
+;
+        }
+        /*.card:hover .hide{
+            display: contents; */
+        /* } */
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <ul class="nav-items">
+                <li class="nav-links"><a href="../index.html"  >About Me</a></li>
+                <li class="nav-links"><a href="./projects.html" class='active-page' >Projects</a></li>
+                <li class="nav-links"><a href="./contact.html">Contact</a></li>
+                <li class="nav-links"><a href="./blog.html" >Blog</a></li>
+            </ul>
+        </div>
+        <div class="project-box">
+            <h1 class="sub-heading">Academic Projects</h1>
+            <div class="card-items">
+                <div class="card">
+                    <div class="card-elements">
+                        <div class="card-image">
+                            <img src="../img/othello_game.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h5 class="description">Othello Game</h5>
+                            <p class="content">Classic Othello game implemented in Python and Processing library with basic AI heuristic.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-elements">
+                        <div class="card-image">
+                            <img src="../img/java8.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h5 class="description">CS 5004 Group Project</h5>
+                            <p class="content">Collaborated in a team of 3 peers for developing an
+                                property booking system using Object Oriented Design principles in Java</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-elements">
+                        <div class="card-image" >
+                            <img src="../img/pup_target_game.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h5 class="description">Pup Target</h5>
+                            <p class="content"> Single player multi-level game using HTML/CSS, jQuery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-elements">
+                        <div class="card-image">
+                            <img src="../img/kw.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <h5 class="description">Kitchen Wonders</h5>
+                            <p class="content"> Kitchen Wonders: Online food ordering system by home-chefs built as part of
+                            project in WDI-sg Bootcamp at GA.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <div class="card-image"><img src="./img/rr_at_ntu.png" alt=""></div>
+                    <div class="card-content">
+                       MSc. Power Engineering Dissertation project on Grid Compliance.
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="footer-box">3</div>
+    </div>
+</body>
+</html>
