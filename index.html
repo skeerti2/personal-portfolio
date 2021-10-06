@@ -14,7 +14,7 @@
         grid-template-rows: 0.5fr 4fr 0.2fr;
         grid-template-areas:
         "header header header header"
-        "content content sidebar sidebar"
+        "content-area content-area sidebar sidebar"
         "footer footer footer footer";
     }
 
@@ -26,11 +26,31 @@
         grid-template-rows: 0.5fr 2fr 2fr 0.2fr;
         grid-template-areas:
         "header header header header"
-        "content content content content"
         "sidebar sidebar sidebar sidebar"
+        "content-area content-area content-area content-area"
         "footer footer footer footer";
         }
+        .photo-box{
+            height: 350px;
+        }
     }
+    @media only screen and (min-width: 768px) {
+        .wrapper{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 2fr 2fr 0.2fr;
+        grid-template-areas:
+        "header header header header"
+        "sidebar sidebar sidebar sidebar"
+        "content-area content-area content-area content-area"
+        "footer footer footer footer";
+        }
+        .photo-box{
+            height: 350px;
+        }
+    }
+
         /* .middle-content{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -40,7 +60,7 @@
         } */
 
         .name-box{
-            grid-area: content;
+            grid-area: content-area;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
@@ -65,6 +85,8 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
+            /* max-height: 100%; */
+            /* max-width: 100%; */
             /* mix-blend-mode: darken; */
         }
 
@@ -190,8 +212,7 @@
                             </div>
                     </div>
                 </div>
-        <div class="photo-box">
-        </div>
+        <div class="photo-box"></div>
         <div class="footer-box"></div>
     </div>
 </body>

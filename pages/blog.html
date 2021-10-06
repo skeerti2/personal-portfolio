@@ -23,34 +23,24 @@
             grid-area: content;
             display: flex;
             flex-direction: column;
-            flex-wrap: nowrap;
+            /* flex-wrap: nowrap; */
             height: 100%;
-            /* justify-content:center; */
-            /* background-color: ; */
-
-            /* background: linear-gradient(transparent,#EEECFF); */
-            
-            /* align-items: center; */
-            /* margin: auto; */
-            /* font-family: 'Lato', sans-serif; */
-            /* font-family: 'Montserrat', sans-serif; */
         }
 
         .card-items{
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
-            margin: auto;
-            width: 95%;
-            /* height: 100%; */
-            column-gap: 2%;
-            row-gap: 2%;
+            width: 100%;
+            height: 100%;
         }
 
         .card{
-            height: 80%;
-            align-items: center;
-            width: 23%;
+            height: 600px;
+            /* align-items: center; */
+            /* flex: 0 0 calc(25% - 2%); */
+            flex-basis: calc(25% - 2%);
+            margin: 1%;
             opacity: 1;
             background-color: #404253;
             border: 2px solid #B2B9DB;
@@ -63,8 +53,6 @@
             display: flex;
             flex-direction: column;
             max-height: 100%;
-            /* flex-wrap: wrap; */
-            /* height: 100%; */
         }
         
         .card-content{
@@ -93,7 +81,6 @@
             font-family: 'Roboto', sans-serif;
             font-weight: thin;
             line-height: 1.8em;
-            /* line-height: 2px; */
         }
         
         .dance{
@@ -111,10 +98,20 @@
         .coffee{
             background-image: url('../img/coffee.png');
         }
-        
-        /*.card:hover .hide{
-            display: contents; */
-        /* } */
+
+        @media only screen and (max-width: 600px) {
+            .card{
+                flex-basis: calc(100% - 2%);
+                margin: 1%;
+            }
+        }
+
+            @media (min-width: 600px) and (max-width: 768px) {
+            .card{
+                flex-basis: calc(48% - 2%);
+                margin: 1%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -178,12 +175,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="card">
-                    <div class="card-image"><img src="./img/rr_at_ntu.png" alt=""></div>
-                    <div class="card-content">
-                       MSc. Power Engineering Dissertation project on Grid Compliance.
-                    </div>
-                </div> -->
             </div>
         </div>
         <div class="footer-box"></div>

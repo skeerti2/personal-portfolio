@@ -5,6 +5,7 @@ html, body{
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background-color: whitesmoke;
     /* background: linear-gradient(white,#B2B9DB); */
 }
 
@@ -86,7 +87,7 @@ html, body{
 .sub-heading{
     text-align: center;
     font-size: 1.8em;
-    color: #231F20;
+    color: #404253;
     font-family: 'Encode Sans Condensed', sans-serif;
     font-weight: lighter;
     /* font-family: 'Ephesis', cursive; */
@@ -101,10 +102,12 @@ html, body{
     text-align: center;
     color: #404253;
     letter-spacing: 0.1em;
+    margin-top: 0.2em;
 }
 
 .card-description{
     font-family: 'Encode Sans Condensed', sans-serif;
+    margin-top: 0.2em;
     font-size: x-large;
     color: #FFF;
 } 
