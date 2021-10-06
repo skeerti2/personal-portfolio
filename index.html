@@ -34,7 +34,7 @@
             height: 350px;
         }
     }
-    @media only screen and (min-width: 768px) {
+    @media (min-width: 600px) and (max-width: 768px) {
         .wrapper{
         height: 100%;
         display: grid;
@@ -51,14 +51,6 @@
         }
     }
 
-        /* .middle-content{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas:
-            "box1 box2 box3";
-            background-color:white;
-        } */
-
         .name-box{
             grid-area: content-area;
             display: flex;
@@ -66,15 +58,7 @@
             flex-wrap: nowrap;
             justify-content:center;
             padding: 2%;;
-            /* background-color: ; */
-
-            /* background: linear-gradient(transparent,#EEECFF); */
-            
             border: 1px solid #28364C;
-            /* align-items: center; */
-            /* margin: auto; */
-            /* font-family: 'Lato', sans-serif; */
-            /* font-family: 'Montserrat', sans-serif; */
         }
 
     
@@ -85,9 +69,6 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
-            /* max-height: 100%; */
-            /* max-width: 100%; */
-            /* mix-blend-mode: darken; */
         }
 
         .photo-box img{
@@ -109,13 +90,8 @@
             width: 150px;
         }
         .card-container > img{
-            /* background-color: aquamarine; */
-            
-            /* object-fit: contain; */
-            /* opacity: 1; */
             width: 100%;
             display: block;
-            /* border: 2px solid black; */
         }
 
         .overlay{
@@ -126,18 +102,12 @@
             right: 0;
             height: 100%;
             width: 100%;
-            /* background: #B2B9DB; */
             background: none;
             border: 2px solid #71D9D0;;
             opacity: 0;
             transition: .5s ease;
-            /* background-color: #404253; */
             border-radius: 5px;
             box-shadow: 2px 1px 2px 1px #404253;
-            /* position: relative; */
-            /* height: 150px; */
-            /* width: 150px; */
-            /* display: none; */
         }
         
         .education-text{
@@ -148,11 +118,6 @@
         }
         .card-container:hover .overlay {
             opacity: 0.8;
-            /* display: none; */
-            /* transition: 0.5s; */
-             /* opacity: 0.2; */
-            /* display: block; */
-            /* background: #88A5BF; */
         }
 
         .card-container:hover img{
