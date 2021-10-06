@@ -18,78 +18,22 @@
             "content content content content"
             "footer footer footer footer";
         }
-        /* .navbar{
-            grid-area: header;
-            background-color: #404253;
-        }
-
-        .footer-box{
-            grid-area: footer;
-            background-color: #404253;
-        }
-
-        .nav-items{
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-        .nav-items li{
-            display: inline-block;
-            margin: 0 2em 0 2em;
-        }
-
-        .nav-items li a{
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            color: white;
-        }
-
-        .nav-items li a.active-page{
-            background-color: #59AAA3;
-            color: #231F20;
-        }
-        .nav-links{
-            color: whitesmoke;
-            transition: 0.2s;
-        }
-        .nav-links:hover{
-            cursor: pointer;
-            background-color: #59AAA3;
-            color: black;
-        } */
-
-        /* .middle-content{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas:
-            "box1 box2 box3";
-            background-color:white;
-        } */
-
+    
         .project-box{
             grid-area: content;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
             height: 100%;
-            /* justify-content:center; */
-            /* background-color: ; */
-
-            /* background: linear-gradient(transparent,#EEECFF); */
-            
-            /* align-items: center; */
-            /* margin: auto; */
-            /* font-family: 'Lato', sans-serif; */
-            /* font-family: 'Montserrat', sans-serif; */
         }
 
         .content{
             font-family: 'Roboto', sans-serif;
             font-weight: thin;
             line-height: 1.8em;
-            /* line-height: 2px; */
         }
         .card-items{
+            margin: 0 auto;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-evenly;
@@ -108,18 +52,18 @@
             border: 2px solid #B2B9DB;
             border-radius: 10px;
             transition: .5s ease;
+            position: relative;
         }
         
         .card-elements{
             display: flex;
-            /* flex-wrap: wrap; */
             height: 100%;
         }
         
 
         .card-content{
-            /* padding: 2%; */
-            flex: 2;
+            padding: 2%;
+            flex: 1;
             text-align: center;
             align-self: center;
             color: whitesmoke;
@@ -127,7 +71,6 @@
 
         .card-image{
             flex-basis: 33%;
-            
         }
 
         .card-image img {
@@ -135,24 +78,31 @@
             max-width: 100%;
             object-fit: cover;
         }
-        /* .card:hover .card-image{
-            display: none;
-        }
+
         .hide{
-            display: none;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            visibility: hidden;
+            color: whitesmoke;
         }
-        .hide img{
-            width: 100%;
-            height: 100%;
-        }*/
-        .card:hover .card{
-            background-color:#96D4E3;
+
+        a{
+            text-decoration: none;
+        }
+        
+        .card:hover .card-content{
+            background-color:404253;
             opacity: 0.2;
         }
         
-        /*.card:hover .hide{
-            display: contents; */
-        /* } */
+        .card:hover .hide{
+            visibility: visible;
+            text-align: center;
+            margin: auto;
+        }
 
     @media only screen and (max-width: 600px) {
         .card-items{
@@ -162,13 +112,16 @@
             align-items: center;
         }
         .card{
-            height: 40%;
+            height: 50%;
             max-width: 98%;
+        }
+        .card-items{
+            margin-top: 1.2em;
         }
         
     }
 
-    @media only screen and (max-width: 720px) {
+    @media (min-width: 600px) and (max-width: 768px) {
         .card-items{
             flex-flow: column nowrap;
             justify-content: center;
@@ -176,8 +129,12 @@
             align-items: center;
         }
         .card{
-            height: 40%;
+            height: 50%;
             max-width: 98%;
+        }
+        
+        .card-items{
+            margin-top: 1.2em;
         }
         
     }
@@ -198,6 +155,7 @@
             <h1 class="sub-heading">Academic Projects</h1>
             <div class="card-items">
                 <div class="card">
+                    <a class="hide" href="#"></a>
                     <div class="card-elements">
                         <div class="card-image">
                             <img src="../img/othello_game.png" alt="">
@@ -210,12 +168,16 @@
                 </div>
 
                 <div class="card">
+                    
                     <div class="card-elements">
                         <div class="card-image">
                             <img src="../img/java8.png" alt="">
                         </div>
                         <div class="card-content">
-                            <h5 class="description card-description">CS 5004 Group Project</h5>
+                            <a class="hide description" href="https://github.ccs.neu.edu/cs5004-spr21-sea/Group_Steven_Fountain_Bo_Mendez_Sruti_Munukutla/tree/master/HW7">
+                                Link to github
+                            </a>
+                            <h5 class="description card-description">Java OOD Project</h5>
                             <p class="content">Collaborated in a team of 3 peers for developing an
                                 property booking system using Object Oriented Design principles in Java</p>
                         </div>
@@ -223,11 +185,15 @@
                 </div>
 
                 <div class="card">
+                    
                     <div class="card-elements">
                         <div class="card-image" >
                             <img src="../img/pup_target_game.png" alt="">
                         </div>
                         <div class="card-content">
+                            <a class="hide description" href="https://skeerti2.github.io/wdi-project-1-skeerti2/index.html">
+                                Link to github
+                            </a>
                             <h5 class="description card-description">Pup Target</h5>
                             <p class="content"> Single player multi-level game using HTML/CSS, jQuery.</p>
                         </div>
@@ -246,12 +212,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="card">
-                    <div class="card-image"><img src="./img/rr_at_ntu.png" alt=""></div>
-                    <div class="card-content">
-                       MSc. Power Engineering Dissertation project on Grid Compliance.
-                    </div>
-                </div> -->
             </div>
         </div>
         <div class="footer-box"></div>

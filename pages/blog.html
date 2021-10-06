@@ -15,15 +15,14 @@
             grid-template-rows: 0.5fr 4fr 0.2fr;
             grid-template-areas:
             "header header header header"
-            "content content content content"
+            "content-area content-area content-area content-area"
             "footer footer footer footer";
         }
 
         .project-box{
-            grid-area: content;
+            grid-area: content-area;
             display: flex;
             flex-direction: column;
-            /* flex-wrap: nowrap; */
             height: 100%;
         }
 
@@ -36,10 +35,8 @@
         }
 
         .card{
-            height: 600px;
-            /* align-items: center; */
-            /* flex: 0 0 calc(25% - 2%); */
-            flex-basis: calc(25% - 2%);
+            height: 500px;
+            flex-basis: calc(23% - 2%);
             margin: 1%;
             opacity: 1;
             background-color: #404253;
@@ -125,12 +122,12 @@
                 <li><a class="nav-links active-page" href="./blog.html" >Blog</a></li>
             </ul>
         </div>
+
         <div class="project-box">
             <h1 class="sub-heading">More about me!</h1>
             <p class="description">Some of my hobbies include dancing, travelling and the most recent one, learning to play guitar!
             </p>
             <div class="card-items">
-
                 <div class="card">
                     <div class="card-elements">
                         <div class="card-image dance"></div>

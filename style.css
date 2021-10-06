@@ -1,12 +1,10 @@
 html, body{
     height: 100%;
     width: 100%;
-    /* width: 100vh; */
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
     background-color: whitesmoke;
-    /* background: linear-gradient(white,#B2B9DB); */
 }
 
 
@@ -58,6 +56,8 @@ html, body{
 
 .footer-box{
     grid-area: footer;
+    height: 100%;
+    width: 100%;
     background-color: #404253;
     color: #63A1F2;
 }
@@ -68,20 +68,12 @@ html, body{
 .heading-content{
     text-align: center;
     font-size: 3em;
-    /* color: 28364C; */
-    /* color: black; */
     color: #71D9D0;
-    /* color: #96D4E3; */
-    /* color: #025949; */
     text-shadow: 2px 2px 5px#000;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-family: 'Encode Sans Condensed', sans-serif;
-    /* font-family: 'Ephesis', cursive; */
-    /* font-family: 'Birthstone Bounce', cursive; */
-
     font-weight: lighter;
-    /* font-family: 'Italiana', serif; */
 }
 
 .sub-heading{
@@ -90,19 +82,17 @@ html, body{
     color: #404253;
     font-family: 'Encode Sans Condensed', sans-serif;
     font-weight: lighter;
-    /* font-family: 'Ephesis', cursive; */
-    /* font-weight: thin; */
 }
 
 .description{
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
     line-height: 1.3em;
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
     color: #404253;
     letter-spacing: 0.1em;
-    margin-top: 0.2em;
+    margin: 0.2em 0 0.2em 0;
 }
 
 .card-description{
