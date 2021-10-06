@@ -5,6 +5,7 @@ html, body{
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    background: linear-gradient(white,#B2B9DB);
 }
 
 
@@ -96,7 +97,7 @@ html, body{
     font-family: 'Roboto', sans-serif;
     font-weight: medium;
     line-height: 1.3em;
-    font-size: larger;
+    font-size: 1.5em;
     text-align: center;
     color: #231F20;
     letter-spacing: 0.1em;

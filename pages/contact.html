@@ -34,11 +34,11 @@
             width: 100%;
         }
 
-        .description{
+        /* .description{
             font-family: 'Roboto', sans-serif;
             font-size: larger;
             text-align: center;
-        }
+        } */
         .name-box{
             grid-area: content;
             display: flex;
@@ -55,6 +55,7 @@
             margin: auto;
         }
         .contact-box{
+            position: relative;
             /* align-items: flex-start; */
             /* border: 2px solid #59AAA3; */
             width: 100%;
@@ -62,14 +63,15 @@
         }
 
         .contact-box img{
-            position: relative;
+            position: absolute;
+            top:0;
             width: 60px;
             height: 60px;
             max-width: 100%;
             max-width: 100%;
             object-fit: contain;
             float: left;
-            /* padding: 10px; */
+            /* padding: 5px; */
         }
 
         .card-box{
@@ -94,14 +96,28 @@
 
         .contact-box:hover{
         border-radius: 10px;
-        /* border: 5px solid #88A5BF; */
-        box-shadow: 0px 2px 0px 2px #B2B9DB;
+        border: 2px solid #71D9D0;;
+        box-shadow: 2px 1px 2px 1px #404253;
            transform: scale(1.1);
         }
 
         .contact-box:hover .card-box{
             visibility: visible;
         }
+
+         @media only screen and (max-width: 600px) {
+        .wrapper{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 2fr 2fr 0.2fr;
+        grid-template-areas:
+        "header header header header"
+        "content content content content"
+        "sidebar sidebar sidebar sidebar"
+        "footer footer footer footer";
+        }
+    }
         
     </style>
 </head>

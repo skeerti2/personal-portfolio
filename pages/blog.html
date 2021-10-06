@@ -17,55 +17,7 @@
             "header header header header"
             "content content content content"
             "footer footer footer footer";
-            background: linear-gradient(white,#B2B9DB);
         }
-        /* .navbar{
-            grid-area: header;
-            background-color: #404253;
-        }
-
-        .footer-box{
-            grid-area: footer;
-            background-color: #404253;
-        }
-
-        .nav-items{
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-        .nav-items li{
-            display: inline-block;
-            margin: 0 2em 0 2em;
-        }
-
-        .nav-items li a{
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            color: white;
-        }
-
-        .nav-items li a.active-page{
-            background-color: #59AAA3;
-            color: #231F20;
-        } */
-        /* .nav-links{
-            color: whitesmoke;
-            transition: 0.2s;
-        }
-        .nav-links:hover{
-            cursor: pointer;
-            background-color: #59AAA3;
-            color: black;
-        } */
-
-        /* .middle-content{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas:
-            "box1 box2 box3";
-            background-color:white;
-        } */
 
         .project-box{
             grid-area: content;
@@ -84,74 +36,82 @@
             /* font-family: 'Montserrat', sans-serif; */
         }
 
-        .content{
-            font-family: 'Roboto', sans-serif;
-            font-weight: thin;
-            line-height: 1.8em;
-            /* line-height: 2px; */
-        }
         .card-items{
             display: flex;
             flex-flow: row wrap;
             justify-content: center;
             margin: auto;
             width: 95%;
-            height: 100%;
+            /* height: 100%; */
             column-gap: 2%;
             row-gap: 2%;
         }
 
         .card{
-            /* height: 80%; */
+            height: 80%;
             align-items: center;
-            background-color: #404253;
-            max-width: 23%;
+            width: 23%;
             opacity: 1;
+            background-color: #404253;
             border: 2px solid #B2B9DB;
-            border-radius: 10px;
+            border-radius: 5%;
             transition: .5s ease;
+            position: relative;
         }
         
         .card-elements{
             display: flex;
             flex-direction: column;
+            max-height: 100%;
             /* flex-wrap: wrap; */
-            height: 100%;
+            /* height: 100%; */
         }
         
-
         .card-content{
-            flex: 1;
+            overflow: auto;
+            flex: 2;
             text-align: center;
             align-self: center;
             color: whitesmoke;
         }
 
         .card-image{
-            flex: 1;
-            /* flex-basis: 33%; */
+            flex: 0 0 300px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: none;
+            border-top-right-radius: 5%;
+            border-top-left-radius: 5%;
         }
 
         .card-image img {
             height: 100%;
             max-width: 100%;
-            object-fit: cover;
         }
-        /* .card:hover .card-image{
-            display: none;
+
+        .content{
+            font-family: 'Roboto', sans-serif;
+            font-weight: thin;
+            line-height: 1.8em;
+            /* line-height: 2px; */
         }
-        .hide{
-            display: none;
+        
+        .dance{
+            background-image: url('../img/shiamak_winter_funk.jpeg');
         }
-        .hide img{
-            width: 100%;
-            height: 100%;
-        }*/
-        .card:hover .card{
-            background-color:#96D4E3;
-            opacity: 0.2;
-;
+
+        .travelling{
+            background-image: url('../img/olympic_NP.jpeg');
         }
+
+        .jewelry{
+            background-image: url('../img/jewelry_made.jpeg');
+        }
+
+        .coffee{
+            background-image: url('../img/coffee.png');
+        }
+        
         /*.card:hover .hide{
             display: contents; */
         /* } */
@@ -173,11 +133,10 @@
             <p class="description">Some of my hobbies include dancing, travelling and the most recent one, learning to play guitar!
             </p>
             <div class="card-items">
+
                 <div class="card">
                     <div class="card-elements">
-                        <div class="card-image">
-                            <img src="../img/shiamak_winter_funk.jpeg" alt="">
-                        </div>
+                        <div class="card-image dance"></div>
                         <div class="card-content">
                             <h5 class="description card-description">Dance!</h5>
                             <p class="content">One of my favorite hobbies is Bollywood Dance!</p>
@@ -187,8 +146,7 @@
 
                 <div class="card">
                     <div class="card-elements">
-                        <div class="card-image">
-                            <img src="../img/olympic_NP.jpeg" alt="">
+                        <div class="card-image travelling">
                         </div>
                         <div class="card-content">
                             <h5 class="description card-description">Travelling</h5>
@@ -199,8 +157,7 @@
 
                 <div class="card">
                     <div class="card-elements">
-                        <div class="card-image" >
-                            <img src="../img/jewelry_made.jpeg" alt="">
+                        <div class="card-image jewelry">
                         </div>
                         <div class="card-content">
                             <h5 class="description card-description">Jewelry Making</h5>
@@ -213,8 +170,7 @@
 
                 <div class="card">
                     <div class="card-elements">
-                        <div class="card-image">
-                            <img src="../img/coffee.png" alt="">
+                        <div class="card-image coffee">
                         </div>
                         <div class="card-content">
                             <h5 class="description card-description">Coffee</h5>
@@ -230,7 +186,7 @@
                 </div> -->
             </div>
         </div>
-        <div class="footer-box">3</div>
+        <div class="footer-box"></div>
     </div>
 </body>
 </html>
