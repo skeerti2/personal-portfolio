@@ -5,11 +5,11 @@ html, body{
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    background: linear-gradient(white,#B2B9DB);
+    /* background: linear-gradient(white,#B2B9DB); */
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100&family=Ephesis&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@200&family=Ephesis&family=Roboto&display=swap');
 
 .navbar{
     grid-area: header;
@@ -75,7 +75,7 @@ html, body{
     text-shadow: 2px 2px 5px#000;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-family: 'Encode Sans Semi Condensed', sans-serif;
+    font-family: 'Encode Sans Condensed', sans-serif;
     /* font-family: 'Ephesis', cursive; */
     /* font-family: 'Birthstone Bounce', cursive; */
 
@@ -87,7 +87,7 @@ html, body{
     text-align: center;
     font-size: 1.8em;
     color: #231F20;
-    font-family: 'Encode Sans Semi Condensed', sans-serif;
+    font-family: 'Encode Sans Condensed', sans-serif;
     font-weight: lighter;
     /* font-family: 'Ephesis', cursive; */
     /* font-weight: thin; */
@@ -99,12 +99,12 @@ html, body{
     line-height: 1.3em;
     font-size: 1.2em;
     text-align: center;
-    color: #231F20;
+    color: #404253;
     letter-spacing: 0.1em;
 }
 
 .card-description{
-    font-family: 'Encode Sans Semi Condensed', sans-serif;
+    font-family: 'Encode Sans Condensed', sans-serif;
     font-size: x-large;
     color: #FFF;
 } 
