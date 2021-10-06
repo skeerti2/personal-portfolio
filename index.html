@@ -5,73 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        html, body{
-            height: 100vh;
-            margin: 0px;
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100&family=Ephesis&family=Roboto&display=swap');
-        /* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Italiana&family=Lato&family=Roboto&display=swap'); */
         .wrapper{
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 0.5fr 4fr 0.2fr;
-            grid-template-areas:
-            "header header header header"
-            "content content sidebar sidebar"
-            "footer footer footer footer";
-            /* background: linear-gradient(white,#B2B9DB); */
-            background: linear-gradient(white,#B2B9DB);
-
-        }
-        .navbar{
-            grid-area: header;
-            background-color: #404253;
-        }
-
-        /* .content-box{
-            grid-area: content;
-            background: whitesmoke;
-        } */
-        .footer-box{
-            grid-area: footer;
-            background-color: #404253;
-        }
-
-        .nav-items{
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-        .nav-items li{
-            display: inline-block;
-            margin: 0 2em 0 2em;
-        }
-
-        .nav-items li a{
-            font-family: 'Roboto', sans-serif;
-            text-decoration: none;
-            color: white;
-        }
-        .nav-items li a.active-page{
-            background-color: #59AAA3;
-            color: #231F20;
-        }
-
-        .nav-links{
-            /* align-self: flex-end; */
-            color: whitesmoke;
-            transition: 0.2s;
-        }
-        .nav-links:hover{
-            cursor: pointer;
-            /* transition-delay: 0.2s; */
-            /* background-color:#88A5BF; */
-            background-color: #59AAA3;
-            color: #231F20;
-        }
-
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 4fr 0.2fr;
+        grid-template-areas:
+        "header header header header"
+        "content content sidebar sidebar"
+        "footer footer footer footer";
+        /* background: linear-gradient(white,#B2B9DB); */
+        background: linear-gradient(white,#B2B9DB);
+    }
         /* .middle-content{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -223,6 +170,7 @@
     <div class="wrapper">
 
         <div class="navbar">
+            <h1 class="heading-content">Sruti Keerti</h1>
             <ul class="nav-items">
                 <li class="nav-links"><a href="./index.html" class='active-page' >About Me</a></li>
                 <li class="nav-links"><a href="./pages/projects.html" >Projects</a></li>
@@ -232,7 +180,6 @@
         </div>
 
                 <div class="name-box">
-                    <h1 class="heading-content">Sruti Keerti</h1>
                     <!-- <h3 class="description">Hello, Welcome to my website!</h3> -->
                     <p class="description">
                         I'm a Computer Science graduate student at Northeastern University with prior
