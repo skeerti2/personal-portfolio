@@ -85,7 +85,7 @@ html, body{
 
 .sub-heading{
     text-align: center;
-    font-size: 2em;
+    font-size: 1.8em;
     color: #231F20;
     font-family: 'Encode Sans Semi Condensed', sans-serif;
     font-weight: lighter;
@@ -95,9 +95,9 @@ html, body{
 
 .description{
     font-family: 'Roboto', sans-serif;
-    font-weight: medium;
+    font-weight: 100;
     line-height: 1.3em;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: center;
     color: #231F20;
     letter-spacing: 0.1em;
@@ -127,5 +127,9 @@ html, body{
         display: inline-block;
         /* align-items: flex-end; */
         margin: 1em 1em 1em 1em;
+    }
+
+    .description{
+        font-size: 1em;
     }
 }

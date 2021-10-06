@@ -7,11 +7,6 @@
     <title>My portfolio</title>
     <link rel="stylesheet" href="../style.css">
     <style>
-        html, body{
-            height: 100vh;
-            margin: 0px;
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@100&family=Ephesis&family=Roboto&display=swap');
         .wrapper{
             height: 100%;
             display: grid;
@@ -48,29 +43,30 @@
         }
         .contact-items{
             display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
+            flex-flow: column nowrap;
+            /* justify-content: center; */
             row-gap: 20px;
             width: 80%;
             margin: auto;
         }
         .contact-box{
             position: relative;
-            /* align-items: flex-start; */
-            /* border: 2px solid #59AAA3; */
             width: 100%;
             height: 60px;
+            display: flex;
+            flex-wrap: nowrap;
+            column-gap: 5%;
         }
 
         .contact-box img{
-            position: absolute;
-            top:0;
+            /* position: absolute; */
+            /* top:0; */
             width: 60px;
             height: 60px;
             max-width: 100%;
             max-width: 100%;
             object-fit: contain;
-            float: left;
+            /* float: left; */
             /* padding: 5px; */
         }
 
@@ -80,7 +76,8 @@
             /* margin-left: auto; */
             /* background-color: whitesmoke; */
             border-radius: 10px;
-            height: 100%;
+            height: auto;
+            width: auto;
             /* display: inline; */
             /* width: 100%; */
             /* height: 100%; */
@@ -94,6 +91,10 @@
             visibility: hidden;
         }
 
+        .card-box > *{
+            text-decoration: none;
+        }
+
         .contact-box:hover{
         border-radius: 10px;
         border: 2px solid #71D9D0;;
@@ -103,6 +104,10 @@
 
         .contact-box:hover .card-box{
             visibility: visible;
+        }
+
+        .contact-box:hover .contact-box>img{
+            display: none;
         }
 
          @media only screen and (max-width: 600px) {
@@ -136,6 +141,7 @@
 
         <div class="name-box">
             <h2 class="sub-heading">Get in touch</h2>
+            <p class="description">I currently live in Seattle and you can get in touch with me through the following socials:</p>
             <div class="contact-items">
                 <div class="contact-box">
                     <img class="gmail" src="../img/gmail.png" alt="">
@@ -146,7 +152,8 @@
                 <div class="contact-box">
                     <img src="../img/linkedin.png" alt="">
                     <div class="card-box linkedin-box">
-                        <p class="description">https://www.linkedin.com/in/sruti-keerti/
+                        <p class="description">
+                            <a href="https://www.linkedin.com/in/sruti-keerti/">linkedin.com/in/sruti-keerti/</a>
                         </p>
                     </div>
                 </div>
@@ -158,14 +165,14 @@
                 </div>
                 <div class="contact-box"><img src="../img/instagram.png" alt="">
                     <div class="card-box insta-box">
-                        <p class="description">https://www.instagram.com/peppykeerti/
+                        <p class="description"><a href="https://www.instagram.com/peppykeerti/">instagram.com/peppykeerti/</a>
                         </p>
                     </div>
                 </div>
                 <div class="contact-box"><img src="../img/facebook.png" alt="">
                     <div class="card-box fb-box">
                         <p class="description">
-                            https://www.facebook.com/peppykeerti
+                            <a href="https://www.facebook.com/peppykeerti">facebook.com/peppykeerti</a>
                         </p>
                     </div>
                 </div>
