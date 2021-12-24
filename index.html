@@ -1,68 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <style>
-        .wrapper{
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 4fr 0.2fr;
-        grid-template-areas:
-        "header header header header"
-        "content-area content-area sidebar sidebar"
-        "footer footer footer footer";
-    }
+        .wrapper {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.5fr 4fr 0.2fr;
+            grid-template-areas:
+                "header header header header"
+                "content-area content-area sidebar sidebar"
+                "footer footer footer footer";
+        }
 
-    @media only screen and (max-width: 600px) {
-        .wrapper{
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 2fr 2fr 0.2fr;
-        grid-template-areas:
-        "header header header header"
-        "sidebar sidebar sidebar sidebar"
-        "content-area content-area content-area content-area"
-        "footer footer footer footer";
-        }
-        .photo-box{
-            height: 350px;
-        }
-    }
-    @media (min-width: 600px) and (max-width: 768px) {
-        .wrapper{
-        height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0.5fr 2fr 2fr 0.2fr;
-        grid-template-areas:
-        "header header header header"
-        "sidebar sidebar sidebar sidebar"
-        "content-area content-area content-area content-area"
-        "footer footer footer footer";
-        }
-        .photo-box{
-            height: 350px;
-        }
-    }
+        @media only screen and (max-width: 600px) {
+            .wrapper {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 0.5fr 2fr 2fr 0.2fr;
+                grid-template-areas:
+                    "header header header header"
+                    "sidebar sidebar sidebar sidebar"
+                    "content-area content-area content-area content-area"
+                    "footer footer footer footer";
+            }
 
-        .name-box{
+            .photo-box {
+                height: 350px;
+            }
+        }
+
+        @media (min-width: 600px) and (max-width: 768px) {
+            .wrapper {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 0.5fr 2fr 2fr 0.2fr;
+                grid-template-areas:
+                    "header header header header"
+                    "sidebar sidebar sidebar sidebar"
+                    "content-area content-area content-area content-area"
+                    "footer footer footer footer";
+            }
+
+            .photo-box {
+                height: 350px;
+            }
+        }
+
+        .name-box {
             grid-area: content-area;
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            justify-content:center;
-            padding: 2%;;
+            justify-content: center;
+            padding: 2%;
+            ;
             border: 1px solid #28364C;
         }
 
-    
-        .photo-box{
+
+        .photo-box {
             grid-area: sidebar;
             border: 1px solid #28364C;
             background-image: url("./img/me.jpeg");
@@ -71,12 +78,12 @@
             background-position: center center;
         }
 
-        .photo-box img{
+        .photo-box img {
             height: auto;
             width: 100%;
         }
-        
-        .education{
+
+        .education {
             grid-area: box3;
             text-align: center;
             display: flex;
@@ -84,17 +91,18 @@
             justify-content: space-around;
         }
 
-        .card-container{
+        .card-container {
             position: relative;
             height: 150px;
             width: 150px;
         }
-        .card-container > img{
+
+        .card-container>img {
             width: 100%;
             display: block;
         }
 
-        .overlay{
+        .overlay {
             position: absolute;
             top: 0;
             bottom: 0;
@@ -103,82 +111,120 @@
             height: 100%;
             width: 100%;
             background: none;
-            border: 2px solid #71D9D0;;
+            border: 2px solid #71D9D0;
+            ;
             opacity: 0;
             transition: .5s ease;
             border-radius: 5px;
             box-shadow: 2px 1px 2px 1px #404253;
         }
-        
-        .education-text{
+
+        .education-text {
             text-align: center;
             color: #404253;
             display: block;
-            margin: auto;
+            margin: 0 auto;
+            font-size: small;
         }
+
         .card-container:hover .overlay {
             opacity: 0.8;
         }
 
-        .card-container:hover img{
+        .card-container:hover img {
             display: none;
         }
-        .card-container:hover{
+
+        .card-container:hover {
             transition: .5s ease-in-out;
             transform: scale(1.1);
         }
-        
     </style>
 </head>
+
 <body>
     <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">
+                <h1 class="heading-content">Sruti Keerti</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="navbar">
-            <h1 class="heading-content">Sruti Keerti</h1>
-            <ul class="nav-items">
-                <li><a class="nav-links active-page" href="#" >About Me</a></li>
-                <li><a class="nav-links" href="./projects/" >Projects</a></li>
-                <li ><a class="nav-links" href="./contact/">Contact</a></li>
-                <li ><a class="nav-links" href="./blog/" >Blog</a></li>
-            </ul>
-        </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./projects/">Projects</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./contact/">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog/">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
 
-                <div class="name-box">
-                    <h3 ></p>
-                    <p class="description">
-                        I'm a Computer Science graduate student at Northeastern University with prior
-                        experience and interest in Full Stack Web development. 
-                        My journey into tech started with an idea of building a website for home-chefs
-                        in 2016.
-                        After a deep dive into Full Stack Web development, there was no turning back!
-                    </p>
-                    <h3 class="sub-heading">Education</h3>
-                    <div class="education">
-                            <div class="card-container">
-                                <img class="image" src="./img/NU.png" alt="NEU_logo">
-                                <div class="overlay">
-                                    <div class="education-text">Candidate for MSCS Align Program, <br> Fall 2020 - May 2023(Exp)</div>
-                                </div>
-                            </div>
-                            <div class="card-container"><img src="./img/NTU.png" alt="NTU">
-                                <div class="overlay">
-                                    <div class="education-text">MSc Power Engineering with Dissertation from NTU@Rolls-Royce Corporate Lab<br> Aug 2015 - June 2016</div>
-                                </div>
-                            </div>
-                            <div class="card-container"><img src="./img/GA.png" alt="GA_logo">
-                                <div class="overlay">
-                                    <div class="education-text"> Web development Bootcamp Graduate, Singapore <br> Jan 2017 - Apr 2017</div>
-                                </div>
-                            </div>
-                            <div class="card-container"><img src="./img/MU.png" alt="MU_logo">
-                                <div class="overlay">
-                                    <div class="education-text">Bachelors in Electrical Engineering<br> Aug 2009 - Jun 2013</div>
-                                </div>
-                            </div>
+        <div class="name-box">
+            <p class="description">
+                I'm a Computer Science graduate student at Northeastern University with prior
+                experience and interest in Full Stack Web development.
+                My journey into tech started with an idea of building a website for home-chefs
+                in 2016.
+                After a deep dive into Full Stack Web development, there was no turning back!
+            </p>
+
+            <p class="description">
+                I am looking for Internship and Co-op opportunities in 2022 and full-time roles in 2023.
+                
+            </p>
+            <!-- <p class="description">
+                Welcome to my website!
+            </p> -->
+            <h3 class="sub-heading">Education</h3>
+            <div class="education">
+                <div class="card-container">
+                    <img class="image" src="./img/NU.png" alt="NEU_logo">
+                    <div class="overlay">
+                        <div class="education-text">Candidate for MSCS Align Program, <br> Fall 2020 - May 2023(Exp)
+                        </div>
                     </div>
                 </div>
+                <div class="card-container"><img src="./img/NTU.png" alt="NTU">
+                    <div class="overlay">
+                        <div class="education-text">MSc Power Engineering with Dissertation from NTU@Rolls-Royce
+                            Corporate Lab<br> Aug 2015 - June 2016</div>
+                    </div>
+                </div>
+                <div class="card-container"><img src="./img/GA.png" alt="GA_logo">
+                    <div class="overlay">
+                        <div class="education-text"> Web development Bootcamp Graduate, Singapore <br> Jan 2017 -
+                            Apr 2017</div>
+                    </div>
+                </div>
+                <div class="card-container"><img src="./img/MU.png" alt="MU_logo">
+                    <div class="overlay">
+                        <div class="education-text">Bachelors in Electrical Engineering<br> Aug 2009 - Jun 2013
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="photo-box"></div>
         <div class="footer-box">&nbsp;</div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

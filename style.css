@@ -13,23 +13,23 @@ html, body{
 .navbar{
     grid-area: header;
     background-color: #404253;
-    display: flex;
+    /* display: flex;
     flex-direction: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
 }
 
-.nav-items{
+/* .nav-items{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-}
-.nav-items li{
+} */
+/* .nav-items li{
     display: inline-block;
     align-items: flex-end;
     margin: 2em 2em 2em 2em;
-}
+} */
 
-.nav-items li a{
+/* .nav-item li a{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: white;
@@ -52,7 +52,7 @@ html, body{
     cursor: pointer;
     background-color: #71D9D0;
     color: #404253;
-}
+} */
 
 .footer-box{
     grid-area: footer;
@@ -67,7 +67,7 @@ html, body{
 
 .heading-content{
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #71D9D0;
     text-shadow: 2px 2px 5px#000;
     letter-spacing: 0.2em;
@@ -82,12 +82,14 @@ html, body{
     color: #404253;
     font-family: 'Encode Sans Condensed', sans-serif;
     font-weight: lighter;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 .description{
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    line-height: 1.3em;
+    line-height: 1.7em;
     font-size: 1em;
     text-align: center;
     color: #404253;
@@ -105,22 +107,15 @@ html, body{
     .navbar{
         grid-area: header;
         background-color: #404253;
-        display: flex;
+        /* display: flex;
         flex-direction: column wrap;
-        justify-content: center;
+        justify-content: center; */
     }
 
-    .nav-items{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    .heading-content{
+        font-size: 1.9em;
     }
 
-    .nav-items li{
-        display: inline-block;
-        /* align-items: flex-end; */
-        margin: 1em 1em 1em 1em;
-    }
 
     .description{
         font-size: 1em;

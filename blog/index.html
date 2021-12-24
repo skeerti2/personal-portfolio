@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Italiana&family=Lato&family=Roboto&display=swap');
@@ -34,6 +36,11 @@
             height: 100%;
         }
 
+        /* .card-items::after{
+            content: "";
+            flex: auto;
+        } */
+
         .card{
             height: 500px;
             flex-basis: calc(23% - 2%);
@@ -52,6 +59,7 @@
             max-height: 100%;
         }
         
+
         .card-content{
             overflow: auto;
             flex: 2;
@@ -113,18 +121,32 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="navbar">
-            <h1 class="heading-content">Sruti Keerti</h1>
-            <ul class="nav-items">
-                <li><a class="nav-links" href="../index.html"  >About Me</a></li>
-                <li><a  class="nav-links" href="../projects/" >Projects</a></li>
-                <li><a class="nav-links" href="../contact/">Contact</a></li>
-                <li><a class="nav-links active-page" href="#" >Blog</a></li>
-            </ul>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">
+                <h1 class="heading-content">Sruti Keerti</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../projects/">Projects</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../contact/">Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+
 
         <div class="project-box">
-            <h1 class="sub-heading">More about me!</h1>
+            <h1 class="sub-heading">More about me</h1>
             <p class="description">Some of my hobbies include dancing, travelling and the most recent one, learning to play guitar!
             </p>
             <div class="card-items">
@@ -132,7 +154,7 @@
                     <div class="card-elements">
                         <div class="card-image dance"></div>
                         <div class="card-content">
-                            <h5 class="description card-description">Dance!</h5>
+                            <h5 class="description card-description">Dance</h5>
                             <p class="content">One of my favorite hobbies is Bollywood Dance!</p>
                         </div>
                     </div>
@@ -179,5 +201,15 @@
         </div>
         <div class="footer-box">&nbsp;</div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
 </html>
